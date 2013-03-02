@@ -35,6 +35,11 @@ ln -s /var/lib/vz /vz
 
 # Install Ovz-web-panel from Google Code.
 echo "wget -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" > webui.sh
+echo "/etc/init.d/owp stop" >> webui.sh
+echo "wget -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh
+echo "cp /tmp/owp.conf /etc/owp.conf" >> webui.sh
+echo "/etc/init.d/owp start" >> webui.sh
+
 
 wget -O /tmp/sysctl.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/sysctl.conf
 echo "Over writing /etc/sysctl.conf"
@@ -43,12 +48,6 @@ cp /tmp/sysctl.conf /etc/sysctl.conf
 wget -O /tmp/vz.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/vz.conf
 echo "Over writing /etc/vz/vz.conf"
 cp /tmp/vz.conf /etc/vz/vz.conf
-
+echo ""
 echo "Patching of Debian 6 installation is finished + removal of nfs + portmap daemon. Installation of OpenVZ + nmap + harden-server + ksplice + ifenslave (bonding)"
 echo "Reboot your system now and run webui.sh script after the reboot to install the OpenVZ web interface."
-
-
-
-
-
-
