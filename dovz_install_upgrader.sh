@@ -29,7 +29,7 @@ cp /tmp/sources.list /etc/apt/sources.list
 /usr/bin/apt-get -y update
 /usr/bin/apt-get -y upgrade
 
-/usr/bin/apt-get install -y linux-image-openvz-AMD64 vzctl vzquota vzdump ksplice nmap harden-servers ifenslave-2.6
+/usr/bin/apt-get install -y linux-image-openvz-AMD64 vzctl vzquota vzdump nmap harden-servers ifenslave-2.6
 
 ln -s /var/lib/vz /vz
 
@@ -50,5 +50,5 @@ wget -O /tmp/vz.conf https://raw.github.com/sillkongen/dovz_install_upgrader/mas
 echo "Over writing /etc/vz/vz.conf"
 cp /tmp/vz.conf /etc/vz/vz.conf
 echo ""
-echo "Patching of Debian 6 installation is finished + removal of nfs + portmap daemon. Installation of OpenVZ + nmap + harden-server + ksplice + ifenslave (bonding)"
+echo "Patching of Debian 6 installation is finished + removal of nfs + portmap daemon. Installation of OpenVZ + nmap + harden-server + ifenslave (bonding)"
 echo "Reboot your system now and run webui.sh script after the reboot to install the OpenVZ web interface."
