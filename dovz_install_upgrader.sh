@@ -34,7 +34,8 @@ cp /tmp/sources.list /etc/apt/sources.list
 ln -s /var/lib/vz /vz
 
 # Install Ovz-web-panel from Google Code.
-echo "wget -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" > webui.sh
+echo "#!/bin/sh" > webui.sh
+echo "wget -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" >> webui.sh
 echo "/etc/init.d/owp stop" >> webui.sh
 echo "wget -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh
 echo "cp /tmp/owp.conf /etc/owp.conf" >> webui.sh
