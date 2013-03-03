@@ -2,7 +2,7 @@ I wanted to be able to save some time when doing OpenVZ installations on Debian 
 
     Setup of Swedish mirrors in /etc/apt/sources.list
     apt-get update and apt-get upgrade run.
-    Installation of linux-image-openvz-AMD64 vzctl vzquota vzdump ksplice nmap harden-servers ifenslave-2.6
+    Installation of linux-image-openvz-AMD64 vzctl vzquota vzdump nmap harden-servers ifenslave-2.6
     Replaces sysctl.conf with OpenVZ config changes
     Replaces vz.conf with network parameter changes.
     Generates a webui.sh script that downloads the OpenVZ Web panel
