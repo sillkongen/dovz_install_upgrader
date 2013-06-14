@@ -14,7 +14,7 @@
 # deb-src http://security.debian.org/ squeeze/updates main contrib non-free
 
 echo "Fetching sources.list from github"
-wget -O /tmp/sources.list https://raw.github.com/sillkongen/dovz_install_upgrader/master/sources.list
+wget -O /tmp/sources.list https://raw.github.com/sillkongen/dovz_install_upgrader/master/sources.list --no-check-certificate
 
 echo "moving old sources.list to /tmp as old.sources.list"
 
@@ -37,7 +37,7 @@ ln -s /var/lib/vz /vz
 echo "#!/bin/sh" > webui.sh
 echo "wget -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" >> webui.sh
 echo "/etc/init.d/owp stop" >> webui.sh
-echo "wget -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh
+echo "wget -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh 
 echo "cp /tmp/owp.conf /etc/owp.conf" >> webui.sh
 echo "/etc/init.d/owp start" >> webui.sh
 
