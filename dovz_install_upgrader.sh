@@ -35,18 +35,18 @@ ln -s /var/lib/vz /vz
 
 # Install Ovz-web-panel from Google Code.
 echo "#!/bin/sh" > webui.sh
-echo "wget -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" >> webui.sh
+echo "wget  --no-check-certificate -O - http://ovz-web-panel.googlecode.com/svn/installer/ai.sh | sh" >> webui.sh
 echo "/etc/init.d/owp stop" >> webui.sh
-echo "wget -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh 
+echo "wget  --no-check-certificate -O /tmp/owp.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/owp.conf" >> webui.sh 
 echo "cp /tmp/owp.conf /etc/owp.conf" >> webui.sh
 echo "/etc/init.d/owp start" >> webui.sh
 
 
-wget -O /tmp/sysctl.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/sysctl.conf
+wget  --no-check-certificate -O /tmp/sysctl.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/sysctl.conf
 echo "Over writing /etc/sysctl.conf"
 cp /tmp/sysctl.conf /etc/sysctl.conf
 
-wget -O /tmp/vz.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/vz.conf
+wget  --no-check-certificate -O /tmp/vz.conf https://raw.github.com/sillkongen/dovz_install_upgrader/master/vz.conf
 echo "Over writing /etc/vz/vz.conf"
 cp /tmp/vz.conf /etc/vz/vz.conf
 echo ""
