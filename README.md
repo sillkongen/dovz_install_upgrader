@@ -7,7 +7,7 @@ I wanted to be able to save some time when doing OpenVZ installations on Debian 
     Replaces vz.conf with network parameter changes.
     Generates a webui.sh script that downloads the OpenVZ Web panel
     
-To install the script do the following: wget https://raw.github.com/sillkongen/dovz_install_upgrader/master/dovz_install_upgrader.sh
+To install the script do the following:  wget --no-check-certificate https://raw.github.com/sillkongen/dovz_install_upgrader/master/dovz_install_upgrader.sh
 
 Then from shell as root: #sh dovz_install_upgrader.sh
 
