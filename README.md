@@ -15,6 +15,6 @@ Wait for a while until script finishes, then reboot.
 
 After the reboot you need to install the Web Panel for OpenVZ. I tried to do this at the same time as the installation and things would not work correctly. 
 
-Installation is done by root: #sh webui.sh
+    Installation is done by root: #sh webui.sh
 
 Now you should be done and should be able to visit your server on https://yourservername_or_ip:3001
